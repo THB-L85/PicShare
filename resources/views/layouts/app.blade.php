@@ -8,20 +8,25 @@
     <title> PicShare - @yield('title') </title>
 </head>
 <body class=" bg-gray-100">
-    <header class="bg-white p-5 border-b shadow">
+    <header class="bg-white p-3 border-b shadow">
         <div class="container mx-auto flex justify-between items-center uppercase">
-            <h1 class="text-3xl font-bold">PicShare</h1>
-            <nav class="flex gap-2 items-center">
-                <a href="">Log In |</a>
-                <a href="">Sign Up</a>
-            </nav>
+            <h1 class="text-2xl font-bold">PicShare</h1>
+            {{-- @auth --}}
+                <nav class="flex gap-2 items-center">
+                    <a href="">New</a>
+                    <a href="">Home</a>
+                    <a href="">Profile</a>
+                </nav>
+            {{-- @endauth --}}
         </div>
     </header>
     <main class="container mx-auto mt-10">
-        <h2 class="text-center text-3xl mb-10">@yield('title')</h2>
+        @auth
+            <h2 class="text-center text-3xl mb-10">@yield('title')</h2>
+        @endauth
         @yield('content')
     </main>
-    <footer class="text-center p-5 uppercase ">
+    <footer class="fixed inset-x-0 bottom-0  bg-white p-5 text-center text-xs uppercase">
         PicShare - Todos los derechos reservados {{ now()->year }}
     </footer>
 </body>
