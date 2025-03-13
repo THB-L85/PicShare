@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PicShareController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,3 +11,4 @@ Route::get('/', function () {
 Route::get('/register',         [RegisterController::class, 'register']);
 Route::post('/save-register',   [RegisterController::class, 'store']);
 Route::get('/login',            [RegisterController::class, 'login']);
+Route::get('/profile',          [PicShareController::class, 'profile']);

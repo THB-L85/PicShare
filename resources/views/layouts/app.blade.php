@@ -14,9 +14,9 @@
             <h1 class="text-2xl font-bold">PicShare</h1>
             {{-- @auth --}}
                 <nav class="flex gap-2 items-center">
-                    <a href="">New</a>
-                    <a href="">Home</a>
-                    <a href="">Profile</a>
+                    <a href=""> New </a>
+                    <a href=""> <img src="{{ asset('images/home.svg') }}" alt="icon_home" height="20" width="20"> </a>
+                    <a href=""> Profile </a>
                 </nav>
             {{-- @endauth --}}
         </div>

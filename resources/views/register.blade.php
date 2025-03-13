@@ -3,7 +3,7 @@
     Register
 @endsection
 @section('content')
-    <div class="flex flex-col bg-white m-auto rounded-2xl w-3/4 lg:flex-row lg:w-2/4">
+    <div class="flex flex-col bg-white m-auto rounded-2xl w-3/4 lg:flex-row lg:w-3/4 xl:w-2/4">
         <img src="{{ asset('images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="main-image" width="500" height="665"
             class="hidden lg:flex lg:w-1/2 rounded-l-2xl">
         <form action="{{ URL::to('/save-register') }}" method="POST" novalidate

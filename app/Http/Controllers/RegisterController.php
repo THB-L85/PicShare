@@ -16,12 +16,6 @@ class RegisterController extends Controller
 
     public function store(Request $request){
         
-        // $name               = $request->get('name');
-        // $username           = $request->get('username');
-        // $email              = $request->get('email');
-        // $password           = $request->get('password');
-        // $confirm_password   = $request->get('confirm_password');
-
         $validation = $request->validate([
             'name'              => 'required|max:30',
             'username'          => 'required|unique:users|min:3|max:20',
