@@ -11,20 +11,20 @@
 <body class=" bg-gray-100">
     <header class="bg-white p-3 border-b shadow">
         <div class="container mx-auto flex justify-between items-center uppercase">
-            <h1 class="text-2xl font-bold">PicShare</h1>
+            <h1 class="text-2xl font-bold"><a href="{{ URL::to('/') }}">PicShare</a></h1>
             {{-- @auth --}}
                 <nav class="flex gap-2 items-center">
-                    <a href=""> New </a>
-                    <a href=""> <img src="{{ asset('images/home.svg') }}" alt="icon_home" height="20" width="20"> </a>
-                    <a href=""> Profile </a>
+                    <a href="#" class="flex w-24 h-9 bg-[#F3F3F3] rounded-lg justify-start items-center text-base"><img src="{{ asset('images/upload.svg') }}" alt="icon_upload" class="pt-0.5 mx-2" height="25" width="25"> New </a>
+                    <a href="{{ URL::to('/') }}"> <img src="{{ asset('images/home.svg') }}" alt="icon_home" height="30" width="30"> </a>
+                    <a href="{{ URL::to('/profile') }}"> <img src="{{ asset('images/profile.svg') }}" alt="icon_profile" height="30" width="30"> </a>
                 </nav>
             {{-- @endauth --}}
         </div>
     </header>
     <main class="container mx-auto mt-10">
-        @auth
-            <h2 class="text-center text-3xl mb-10">@yield('title')</h2>
-        @endauth
+        {{-- @auth --}}
+            <h2 class="text-center text-2xl mb-10">@yield('title_content')</h2>
+        {{-- @endauth --}}
         @yield('content')
     </main>
     <footer class="fixed inset-x-0 bottom-0  bg-white p-5 text-center text-xs uppercase">
