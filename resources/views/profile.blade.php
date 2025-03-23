@@ -18,5 +18,21 @@
             </div>
             <p class="text-base px-14"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corrupti ea incidunt quis similique quod velit ex. </p>
         </div>
+        <div class="grid grid-cols-2  gap-1 mt-8 px-4">
+            <div class="bg-slate-600 w-full h-64">
+                <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                <div class="hidden">Information</div>
+            </div>
+            <div class="bg-slate-600 w-full h-64">
+                <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+            </div>
+            <div class="bg-slate-600 w-full h-64">
+                <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+            </div>
+            <div class="bg-slate-600 w-full h-64">
+                <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                <div class="hidden">Information</div>
+            </div>
+        </div>
     </div>
 @endsection

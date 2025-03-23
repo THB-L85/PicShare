@@ -8,9 +8,9 @@
     @vite('resources/css/app.css')
     <title> PicShare - @yield('title') </title>
 </head>
-<body class=" bg-gray-100">
-    <header class="bg-white p-3 border-b shadow">
-        <div class="container mx-auto flex justify-between items-center uppercase">
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="fixed w-full top-0 bg-white p-3 border-b shadow">
+        <div class="flex mx-5 justify-between items-center uppercase">
             <h1 class="text-2xl font-bold"><a href="{{ URL::to('/') }}">PicShare</a></h1>
             {{-- @auth --}}
                 <nav class="flex gap-2 items-center">
@@ -21,13 +21,13 @@
             {{-- @endauth --}}
         </div>
     </header>
-    <main class="container mx-auto mt-10">
+    <main class="flex-grow container mx-auto my-10">
         {{-- @auth --}}
             <h2 class="text-center text-2xl mb-10">@yield('title_content')</h2>
         {{-- @endauth --}}
         @yield('content')
     </main>
-    <footer class="fixed inset-x-0 bottom-0  bg-white p-5 text-center text-xs uppercase">
+    <footer class="bg-white w-full p-5 text-center text-xs uppercase">
         PicShare - Todos los derechos reservados {{ now()->year }}
     </footer>
 </body>
