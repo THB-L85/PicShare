@@ -20,18 +20,28 @@
         </div>
         <div class="grid grid-cols-2  gap-1 mt-8 px-4">
             <div class="bg-slate-600 w-full h-64">
-                <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
-                <div class="hidden">Information</div>
+                <a href="{{ URL::to('/post-details') }}">
+                    <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                    <div class="hidden">Information</div>
+                </a>
             </div>
             <div class="bg-slate-600 w-full h-64">
-                <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                <a href="{{ URL::to('/post-details') }}">
+                    <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                    <div class="hidden">Information</div>
+                </a>
             </div>
             <div class="bg-slate-600 w-full h-64">
-                <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                <a href="{{ URL::to('/post-details') }}">
+                    <img src="{{ URL::to('/images/main-picshare.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                    <div class="hidden">Information</div>
+                </a>
             </div>
             <div class="bg-slate-600 w-full h-64">
-                <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
-                <div class="hidden">Information</div>
+                <a href="{{ URL::to('/post-details') }}">
+                    <img src="{{ URL::to('/images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="img_profile" height="460" class="w-full h-64">
+                    <div class="hidden">Information</div>
+                </a>
             </div>
         </div>
     </div>
