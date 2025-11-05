@@ -10,7 +10,11 @@ class PicShareController extends Controller
         return view('profile');
     }
 
-    public function photo_details(){
-        return view('photo_details');
+    public function post_details(){
+        return view('post_details');
+    }
+
+    public function create_post(){
+        return view('create_post');
     }
 }
