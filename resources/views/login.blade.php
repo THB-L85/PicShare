@@ -8,7 +8,7 @@
         <form action="" class="flex flex-col w-full text-center px-4 py-10 lg:w-1/2">
             <span class="mb-4 text-2xl">Hello, again!</span>
             <input type="text" placeholder="Email" class="h-10 px-4 mx-4 my-2 bg-[#F2F2F2] rounded-md">
-            <input type="text" placeholder="Password" class="h-10 px-4 mx-4 my-2 bg-[#F2F2F2] rounded-md">
+            <input type="password" placeholder="Password" class="h-10 px-4 mx-4 my-2 bg-[#F2F2F2] rounded-md">
             <button class="h-10 mx-4 my-2 bg-[#B5B5B5] rounded-md"> Log in</button>
             <hr class="border-t-1 border-black mx-4 my-4">
             <span> Don't have an account? <a href="{{ URL::to('/register') }}">Sign up</a></span>
