@@ -6,7 +6,7 @@
     <div class="flex flex-col bg-white m-auto rounded-2xl w-3/4 lg:flex-row lg:w-3/4 xl:w-2/4">
         <img src="{{ asset('images/brett-jordan-Bnld-GhojV8-unsplash.jpg') }}" alt="main-image" width="500" height="665"
             class="hidden lg:flex lg:w-1/2 rounded-l-2xl">
-        <form action="{{ URL::to('save-register') }}" method="POST" novalidate
+        <form action="{{ URL::to('register') }}" method="POST" novalidate
             class="flex flex-col w-full text-center px-4 py-10 lg:w-1/2">
             @csrf
             <span class="mb-4 text-2xl">Create account</span>

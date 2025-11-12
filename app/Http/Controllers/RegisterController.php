@@ -10,12 +10,8 @@ use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
-    public function login(){
-        return view('login');
-    }
-
     public function register(){
-        return view('register');
+        return view('auth.register');
     }
 
     public function store(Request $request){

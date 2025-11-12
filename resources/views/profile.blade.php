@@ -10,7 +10,7 @@
     <div class="flex flex-col items-center container mx-auto md:px-72">
         <div class="mb-4"><img src="" alt="img_profile" width="239" height="239" class="bg-white rounded-full w-auto h-28"></div>
         <div class="flex flex-col items-center gap-1 text-center px-4">
-            <h1 class="text-xl">user_name <a href="#"><i class="fa-solid fa-user-pen fa-xs"></i></a></h1>
+            <h1 class="text-xl"> {{ Auth::user()->username }} <a href="#"><i class="fa-solid fa-user-pen fa-xs"></i></a></h1>
             <div class="flex flex-row gap-4 text-sm">
                 <p> 0 Post </p>
                 <p> 0 Followers </p>
