@@ -39,7 +39,7 @@
             <button type="submit" class="h-10 mx-4 my-2 bg-[#B5B5B5]"> Create </button>
 
             <hr class="border-t-1 border-black mx-4 my-4">
-            <span> Already have an account? <a href="{{ URL::to('/login') }}">Log in</a></span>
+            <span> Already have an account? <a href="{{ Uroute('login') }}">Log in</a></span>
         </form>
     </div>
 @endsection

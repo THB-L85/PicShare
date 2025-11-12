@@ -22,7 +22,7 @@ class LoginController extends Controller
         ]);
 
         //* Attempt to authenticate
-        if(Auth::attempt($credentials)){
+        if(Auth::attempt($credentials, $request->remember)){
             $request->session()->regenerate();
             return redirect()->intended('profile');
         }

@@ -13,14 +13,17 @@
     <header class="fixed w-full top-0 bg-white p-3 border-b shadow">
         <div class="flex mx-5 justify-between items-center uppercase">
             <h1 class="text-2xl font-bold"><a href="{{ URL::to('/') }}">PicShare</a></h1>
-            {{-- @auth --}}
-                <nav class="flex gap-2 items-center">
-                    <a href="{{ URL::to('create-post') }}" title="New Post" class="flex w-24 h-9 bg-[#F3F3F3] rounded-lg justify-start items-center text-base"><img src="{{ asset('images/upload.svg') }}" alt="icon_upload" class="pt-0.5 mx-2" height="25" width="25"> New </a>
-                    <a href="{{ URL::to('/') }}" title="Home"> <img src="{{ asset('images/home.svg') }}" alt="icon_home" height="30" width="30"> </a>
-                    <a href="{{ URL::to('/profile') }}" title="Profile"><img src="{{ asset('images/profile.svg') }}" alt="icon_profile" height="30" width="30"></a>
-                    <a href="{{ URL::to('/') }}" title="Logout"><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+            @auth
+                <nav class="flex gap-3 items-center">
+                    <a href="{{ URL::to('create-post') }}" title="Create New Post" class="flex w-auto pr-2 h-9 bg-[#F3F3F3] rounded-lg justify-start items-center text-sm"><i class="fa-solid fa-plus fa-lg mx-2"></i> Create </a>
+                    <a href="{{ URL::to('/') }}" title="Home"> <i class="fa-solid fa-house fa-lg"></i> </a>
+                    <a href="{{ URL::to('/profile') }}" title="Profile"><i class="fa-solid fa-user fa-lg"></i></a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" title="Logout"><i class="fa-solid fa-right-from-bracket fa-lg pl-4"></i></button>
+                    </form>
                 </nav>
-            {{-- @endauth --}}
+            @endauth
         </div>
     </header>
     <main class="flex-grow container mx-auto my-10">
