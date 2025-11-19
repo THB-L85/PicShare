@@ -6,6 +6,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PicShareController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\imageController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,15 +19,13 @@ Route::post('/login',           [LoginController::class, 'authenticate']);
 Route::post('/logout',          [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/post-details',     [PicShareController::class, 'post_details']);
-Route::get('create-post',       [PostController::class, 'create_post']);
-
 Route::middleware('auth')->group(function () {
-
     Route::get('/',             [PicShareController::class, 'home']);
-    Route::get('/profile',      [ProfileController::class, 'profile'])->name('profile');
-    // otras rutas protegidas
-});
 
-Route::get('/panel', function () {
-    return 'Solo usuarios autenticados';
-})->middleware('auth');
+    Route::get('/create-post',          [PostController::class, 'create_post'])->name('posts.index');
+    Route::post('/images/{user:username}',              [ImageController::class, 'store'])->name('images.store');
+    Route::get('/{user:username}',      [ProfileController::class, 'index'])->name('profile.index');
+    // otras rutas protegidas
+
+
+});

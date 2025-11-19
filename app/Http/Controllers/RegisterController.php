@@ -41,6 +41,8 @@ class RegisterController extends Controller
             'password'  => $request->password
         ]);
 
-        return redirect()->route('profile')->with('message', 'User created successfully. Please log in.');
+        $user = Auth::user();
+
+        return redirect('/' . $user->username)->with('message', 'User created successfully. Please log in.');
     }
 }
