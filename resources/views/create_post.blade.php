@@ -19,6 +19,7 @@
             </form>
             <form action="" method="POST" enctype="multipart/form-data" class="flex flex-col bg-white p-5 rounded-lg w-full">
                 @csrf
+                <input type="text" name="image" id="image" hidden>
                 <textarea name="description" id="description" rows="2" class="mb-4 p-2 border rounded-lg" placeholder="Write a description..."></textarea>
                 <button type="submit" class="bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">Share</button>
             </form>
