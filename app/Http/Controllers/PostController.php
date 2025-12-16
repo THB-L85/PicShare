@@ -10,4 +10,16 @@ class PostController extends Controller
     {
         return view('create_post');
     }
+
+    public function store(Request $request){
+
+        $request->validate([
+            'title'         => 'required|max:255',
+            'description'   => 'required',
+            'image'         => 'required',
+        ]);
+
+        dd($request->all());
+
+    }
 }

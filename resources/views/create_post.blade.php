@@ -17,11 +17,21 @@
             <form method="POST" action="{{ route('images.store',Auth::user()->username) }}" id="dropzone" class="flex justify-center dropzone border border-dashed w-full h-50 p-2" enctype="multipart/form-data">
                 @csrf
             </form>
-            <form action="" method="POST" enctype="multipart/form-data" class="flex flex-col bg-white p-5 rounded-lg w-full">
+            <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data" class="flex flex-col text-sm bg-white p-5 rounded-lg w-full">
                 @csrf
-                <input type="text" name="image" id="image" hidden>
-                <textarea name="description" id="description" rows="2" class="mb-4 p-2 border rounded-lg" placeholder="Write a description..."></textarea>
-                <button type="submit" class="bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">Share</button>
+                <input type="text" name="image" id="image" hidden value="{{ old('image') }}">
+                <input type="text" name="title" id="title" class="mt-2 p-2 border rounded-lg @error('title') border-red-500 @enderror" placeholder="Write a title" value="{{ old('title') }}">
+                @error('title')
+                    <label for="title" class="text-red-500 rounded-lg p-2"> {{ $message }}</label>
+                @enderror
+                <textarea name="description" id="description" rows="2" class="mt-2 p-2 border rounded-lg @error('description') border-red-500 @enderror" placeholder="Write a description...">{{ old('description') }}</textarea>
+                @error('description')
+                    <label for="description" class="text-red-500 rounded-lg p-2"> {{ $message }}</label>
+                @enderror
+                @error('image')
+                    <label for="image" class="text-red-500 rounded-lg p-2"> {{ $message }}</label>
+                @enderror
+                <button type="submit" class="bg-blue-500 text-white mt-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Share</button>
             </form>
         </div>
     </div>
