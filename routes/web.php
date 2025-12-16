@@ -22,9 +22,9 @@ Route::get('/post-details',     [PicShareController::class, 'post_details']);
 Route::middleware('auth')->group(function () {
     Route::get('/',             [PicShareController::class, 'home']);
 
-    Route::get('/create-post',          [PostController::class, 'create_post'])->name('posts.index');
+    Route::get('/create-post',                          [PostController::class, 'create_post'])->name('posts.index');
     Route::post('/images/{user:username}',              [ImageController::class, 'store'])->name('images.store');
-    Route::get('/{user:username}',      [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/{user:username}',                      [ProfileController::class, 'index'])->name('profile.index');
     // otras rutas protegidas
 
 
